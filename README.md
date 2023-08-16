@@ -32,6 +32,6 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 ## После этого проект будет доступен по адресу:
-- http://localhots:8000/
+- http://127.0.0.1:8000/
 ## Также можно загрузить данные для проксирования изображений в формате .csv (потребуются права суперпользователя):
-- http://localhots:8000/upload/
+- http://127.0.0.1:8000/upload/
