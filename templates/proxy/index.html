@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Изображение</title>
+</head>
+<body>
+    {% if image %}
+        <img src="{{ image }}" alt="Изображение">
+    {% else %}
+        <img src="https://b2b2c.market/oc-content/uploads/24432/2442009.jpg" alt="Недоступно">
+        <p style="color: darkorchid">К сожалению, не удалось ничего найти по вашему запросу:</p>
+    {% endif %}
+    <p>{% for category in categories %}{{ category }} {% endfor %}</p>
+</body>
+</html>

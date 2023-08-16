@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Загрузка .csv файла</title>
+</head>
+<body>
+    {% block content %}
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if errors %}{% for error in errors %}<p style="color: red">{{ error }}</p>{% endfor %}{% endif %}
+            <label for="file">Выберите файл для загрузки:</label>
+            <input type="file" id="file" name="file"><br><br>
+            <button type="submit">Отправить</button>
+            {% if success %}<p style="color: #06c447">{{ success }}</p>{% endif %}
+        </form>
+    {% endblock %}
+</body>
+</html>
